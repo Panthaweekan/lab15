@@ -1,9 +1,25 @@
 #include <iostream>
 using namespace std;
 
+int i,j;
+double k;
+
 template <typename T>
 void insertionSort(T d[],int N){
+for (i = 1; i<N ;i++){
+    k = d[i];
+    j = i-1;
+    while (j >=0 && d[j] < k){
+        d[j+1] = d[j];
+        j = j-1;
+    }
 
+    d[j+1] = k;
+
+     cout << "Pass " << i << ":";
+        for(int x = 0; x < 10; x++) cout << d[x] << " ";
+        cout << "\n";
+    } 
 }
 
 int main(){
